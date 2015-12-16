@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4A58F6E71C0B701A002F125B"
-               BuildableName = "BaseProject.app"
-               BlueprintName = "BaseProject"
-               ReferencedContainer = "container:BaseProject.xcodeproj">
+               BuildableName = "NerdChat.app"
+               BlueprintName = "NerdChat"
+               ReferencedContainer = "container:NerdChat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A58F6E71C0B701A002F125B"
-            BuildableName = "BaseProject.app"
-            BlueprintName = "BaseProject"
-            ReferencedContainer = "container:BaseProject.xcodeproj">
+            BuildableName = "NerdChat.app"
+            BlueprintName = "NerdChat"
+            ReferencedContainer = "container:NerdChat.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A58F6E71C0B701A002F125B"
-            BuildableName = "BaseProject.app"
-            BlueprintName = "BaseProject"
-            ReferencedContainer = "container:BaseProject.xcodeproj">
+            BuildableName = "NerdChat.app"
+            BlueprintName = "NerdChat"
+            ReferencedContainer = "container:NerdChat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A58F6E71C0B701A002F125B"
-            BuildableName = "BaseProject.app"
-            BlueprintName = "BaseProject"
-            ReferencedContainer = "container:BaseProject.xcodeproj">
+            BuildableName = "NerdChat.app"
+            BlueprintName = "NerdChat"
+            ReferencedContainer = "container:NerdChat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

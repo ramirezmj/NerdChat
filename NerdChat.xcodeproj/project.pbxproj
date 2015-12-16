@@ -15,7 +15,14 @@
 		4A3077621C20A981003F8B7B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A3077491C20A981003F8B7B /* Info.plist */; };
 		4A3077631C20A981003F8B7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A30774A1C20A981003F8B7B /* main.m */; };
 		4A3077641C20A981003F8B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A30774E1C20A981003F8B7B /* Assets.xcassets */; };
-		4A3077651C20A981003F8B7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A30775C1C20A981003F8B7B /* ViewController.m */; };
+		4A3077651C20A981003F8B7B /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A30775C1C20A981003F8B7B /* HomeVC.m */; };
+		4A45BEE71C21E96400D97B2A /* NCReplies.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEE61C21E96400D97B2A /* NCReplies.m */; };
+		4A45BEEA1C21E99B00D97B2A /* NCFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEE91C21E99B00D97B2A /* NCFriends.m */; };
+		4A45BEED1C21E9D100D97B2A /* NCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEEC1C21E9D100D97B2A /* NCUser.m */; };
+		4A45BEF01C21F36300D97B2A /* NCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEEF1C21F36300D97B2A /* NCHelper.m */; };
+		4A45BEF51C21F7DE00D97B2A /* NCUsersTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEF31C21F7DE00D97B2A /* NCUsersTVC.m */; };
+		4A45BEF61C21F7DE00D97B2A /* NCUsersTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A45BEF41C21F7DE00D97B2A /* NCUsersTVC.xib */; };
+		4A45BEF91C2200DE00D97B2A /* ChatRoomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEF81C2200DE00D97B2A /* ChatRoomVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +37,21 @@
 		4A3077491C20A981003F8B7B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A30774A1C20A981003F8B7B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A30774E1C20A981003F8B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4A30775B1C20A981003F8B7B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4A30775C1C20A981003F8B7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4A30775B1C20A981003F8B7B /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		4A30775C1C20A981003F8B7B /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		4A45BEE51C21E96300D97B2A /* NCReplies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCReplies.h; sourceTree = "<group>"; };
+		4A45BEE61C21E96400D97B2A /* NCReplies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCReplies.m; sourceTree = "<group>"; };
+		4A45BEE81C21E99B00D97B2A /* NCFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCFriends.h; sourceTree = "<group>"; };
+		4A45BEE91C21E99B00D97B2A /* NCFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCFriends.m; sourceTree = "<group>"; };
+		4A45BEEB1C21E9D100D97B2A /* NCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUser.h; sourceTree = "<group>"; };
+		4A45BEEC1C21E9D100D97B2A /* NCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUser.m; sourceTree = "<group>"; };
+		4A45BEEE1C21F36300D97B2A /* NCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHelper.h; sourceTree = "<group>"; };
+		4A45BEEF1C21F36300D97B2A /* NCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHelper.m; sourceTree = "<group>"; };
+		4A45BEF21C21F7DE00D97B2A /* NCUsersTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUsersTVC.h; sourceTree = "<group>"; };
+		4A45BEF31C21F7DE00D97B2A /* NCUsersTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUsersTVC.m; sourceTree = "<group>"; };
+		4A45BEF41C21F7DE00D97B2A /* NCUsersTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCUsersTVC.xib; sourceTree = "<group>"; };
+		4A45BEF71C2200DE00D97B2A /* ChatRoomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomVC.h; sourceTree = "<group>"; };
+		4A45BEF81C2200DE00D97B2A /* ChatRoomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomVC.m; sourceTree = "<group>"; };
 		4A58F6E81C0B701A002F125B /* NerdChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NerdChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +162,9 @@
 		4A3077541C20A981003F8B7B /* business */ = {
 			isa = PBXGroup;
 			children = (
+				4A45BEEB1C21E9D100D97B2A /* NCUser.h */,
+				4A45BEEC1C21E9D100D97B2A /* NCUser.m */,
+				4A45BEE41C21E85900D97B2A /* factory */,
 			);
 			path = business;
 			sourceTree = "<group>";
@@ -156,6 +179,8 @@
 		4A3077561C20A981003F8B7B /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4A45BEEE1C21F36300D97B2A /* NCHelper.h */,
+				4A45BEEF1C21F36300D97B2A /* NCHelper.m */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -171,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3077591C20A981003F8B7B /* controllers */,
+				4A45BEF11C21F71A00D97B2A /* cells */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -179,8 +205,10 @@
 			isa = PBXGroup;
 			children = (
 				4A30775A1C20A981003F8B7B /* common */,
-				4A30775B1C20A981003F8B7B /* ViewController.h */,
-				4A30775C1C20A981003F8B7B /* ViewController.m */,
+				4A30775B1C20A981003F8B7B /* HomeVC.h */,
+				4A30775C1C20A981003F8B7B /* HomeVC.m */,
+				4A45BEF71C2200DE00D97B2A /* ChatRoomVC.h */,
+				4A45BEF81C2200DE00D97B2A /* ChatRoomVC.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -190,6 +218,27 @@
 			children = (
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		4A45BEE41C21E85900D97B2A /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				4A45BEE81C21E99B00D97B2A /* NCFriends.h */,
+				4A45BEE91C21E99B00D97B2A /* NCFriends.m */,
+				4A45BEE51C21E96300D97B2A /* NCReplies.h */,
+				4A45BEE61C21E96400D97B2A /* NCReplies.m */,
+			);
+			path = factory;
+			sourceTree = "<group>";
+		};
+		4A45BEF11C21F71A00D97B2A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				4A45BEF21C21F7DE00D97B2A /* NCUsersTVC.h */,
+				4A45BEF31C21F7DE00D97B2A /* NCUsersTVC.m */,
+				4A45BEF41C21F7DE00D97B2A /* NCUsersTVC.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		4A58F6DF1C0B701A002F125B = {
@@ -269,6 +318,7 @@
 			files = (
 				4A30775E1C20A981003F8B7B /* LaunchScreen.storyboard in Resources */,
 				4A3077611C20A981003F8B7B /* Main.strings in Resources */,
+				4A45BEF61C21F7DE00D97B2A /* NCUsersTVC.xib in Resources */,
 				4A3077601C20A981003F8B7B /* LaunchScreen.strings in Resources */,
 				4A3077621C20A981003F8B7B /* Info.plist in Resources */,
 				4A3077641C20A981003F8B7B /* Assets.xcassets in Resources */,
@@ -283,9 +333,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3077651C20A981003F8B7B /* ViewController.m in Sources */,
+				4A3077651C20A981003F8B7B /* HomeVC.m in Sources */,
+				4A45BEED1C21E9D100D97B2A /* NCUser.m in Sources */,
+				4A45BEF91C2200DE00D97B2A /* ChatRoomVC.m in Sources */,
 				4A3077631C20A981003F8B7B /* main.m in Sources */,
 				4A30775D1C20A981003F8B7B /* AppDelegate.m in Sources */,
+				4A45BEF01C21F36300D97B2A /* NCHelper.m in Sources */,
+				4A45BEE71C21E96400D97B2A /* NCReplies.m in Sources */,
+				4A45BEEA1C21E99B00D97B2A /* NCFriends.m in Sources */,
+				4A45BEF51C21F7DE00D97B2A /* NCUsersTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

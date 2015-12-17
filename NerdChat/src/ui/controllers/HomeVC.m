@@ -71,4 +71,18 @@ static NSString *const kNCUsersCellReuseIdentifier = @"kNCUsersCellReuseIdentifi
     [self performSegueWithIdentifier:@"homeToChatroomSegue" sender:nil];
 }
 
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"homeToChatroomSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ChatRoomVC *chatRoomVC = segue.destinationViewController;
+        chatRoomVC.avatar      = [_users[indexPath.row] avatar];
+        chatRoomVC.name        = [_users[indexPath.row] name];
+        chatRoomVC.phone       = [_users[indexPath.row] phone];
+        NSLog(@"This");
+    }
+}
+
 @end

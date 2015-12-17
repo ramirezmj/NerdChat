@@ -56,17 +56,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBs-WR-UkN">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBs-WR-UkN">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="0Cj-oP-TL6"/>
+                                    <barButtonItem title="Item" style="plain" id="XPV-Ep-8uM">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kRA-vb-cZ3">
+                                            <rect key="frame" x="16" y="3" width="40" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="chat_options"/>
+                                            <state key="highlighted" image="chat_options_pressed"/>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="Avm-6k-Xce">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="nzK-ig-qYA">
+                                            <rect key="frame" x="66" y="7" width="174" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="yaK-Py-ivo">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SMh-9T-ATB">
+                                            <rect key="frame" x="250" y="7" width="64" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.63921568627450975" green="0.019607843137254902" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Send">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wum-GT-NRk">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lPB-k7-NiZ" id="qIo-Cl-gaF"/>
+                                    <outlet property="delegate" destination="lPB-k7-NiZ" id="cNv-Oe-kRS"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="xBs-WR-UkN" firstAttribute="leading" secondItem="RvZ-7U-6bF" secondAttribute="leading" id="OkT-vh-tnr"/>
+                            <constraint firstItem="Wum-GT-NRk" firstAttribute="leading" secondItem="RvZ-7U-6bF" secondAttribute="leading" id="Xjr-8u-da4"/>
+                            <constraint firstItem="xBs-WR-UkN" firstAttribute="top" secondItem="Wum-GT-NRk" secondAttribute="bottom" id="c2q-bl-Fuh"/>
+                            <constraint firstAttribute="trailing" secondItem="xBs-WR-UkN" secondAttribute="trailing" id="kif-yX-xJf"/>
+                            <constraint firstAttribute="trailing" secondItem="Wum-GT-NRk" secondAttribute="trailing" id="l99-z9-cLH"/>
+                            <constraint firstItem="ULx-hu-NLD" firstAttribute="top" secondItem="xBs-WR-UkN" secondAttribute="bottom" id="rsH-pV-MTw"/>
+                            <constraint firstItem="Wum-GT-NRk" firstAttribute="top" secondItem="6g3-4K-no9" secondAttribute="bottom" id="zcG-R6-nMg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iMr-dT-vdM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="sendMessageTF" destination="nzK-ig-qYA" id="bsM-CU-lZd"/>
+                        <outlet property="tableView" destination="Wum-GT-NRk" id="7v2-YE-s9S"/>
+                        <outlet property="toolBar" destination="xBs-WR-UkN" id="q7r-SY-bAC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nvm-RC-gZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,6 +127,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F1g-1W-3D8" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="O5h-Ak-DNs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -91,4 +142,8 @@
             <point key="canvasLocation" x="286.875" y="321.12676056338023"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat_options" width="68" height="66"/>
+        <image name="chat_options_pressed" width="68" height="66"/>
+    </resources>
 </document>

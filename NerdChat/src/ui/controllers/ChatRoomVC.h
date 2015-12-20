@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChatRoomVC : UIViewController <UITextViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface ChatRoomVC : UIViewController <UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *phone;

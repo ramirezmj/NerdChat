@@ -81,7 +81,6 @@ static NSString *const kNCUsersCellReuseIdentifier = @"kNCUsersCellReuseIdentifi
         chatRoomVC.avatar      = [_users[indexPath.row] avatar];
         chatRoomVC.name        = [_users[indexPath.row] name];
         chatRoomVC.phone       = [_users[indexPath.row] phone];
-        NSLog(@"This");
     }
 }
 

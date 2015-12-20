@@ -10,4 +10,8 @@
 
 @interface SenderImageTVC : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *photoIV;
+@property (weak, nonatomic) IBOutlet UILabel *time;
+@property (weak, nonatomic) IBOutlet UIView *seenView;
+
 @end

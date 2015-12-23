@@ -65,7 +65,7 @@
     
     NCChat *message65       = [[NCChat alloc] init];
     message65.image         = [UIImage imageNamed:@"company"];
-    message65.time          = [NSDate date];
+    message65.time          = yesterday;
     message65.isMine        = NO;
     message65.chatDataType  = ChatData_Image;
     
@@ -82,8 +82,8 @@
     message8.chatDataType   = ChatData_Message;
     
     
-    NSArray *array = @[message1, message2, message3, message35, message4,
-                       message5, message6, message65, message7, message8];
+    NSArray *array = @[message1, message35, message2, message65, message3,
+                       message4, message5, message6, message7, message8];
     
     return array;
 }

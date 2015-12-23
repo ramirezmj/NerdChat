@@ -16,6 +16,7 @@
 @interface ChatRoomVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *sendMessageTF;
+@property (weak, nonatomic) IBOutlet UIButton *sendMessageBtn;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *toolBar;
 @property (weak, nonatomic) IBOutlet UILabel *navigationTitleLabel;
@@ -109,12 +110,27 @@
     self.pickerController = [[UIImagePickerController alloc] init];
     _pickerController.delegate = self;
     _pickerController.allowsEditing = YES;
-//    _pickerController.sourceType = 
 }
 
 - (void)dealloc
 {
     [self unregisterFromKeyboardNotifications];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSString *resultStr = [_sendMessageTF.text stringByReplacingCharactersInRange:range withString:string];
+    if (resultStr.length == 0) {
+        _sendMessageBtn.alpha = 0.8f;
+        _sendMessageBtn.userInteractionEnabled = NO;
+    } else {
+        _sendMessageBtn.alpha = 1.0f;
+        _sendMessageBtn.userInteractionEnabled = YES;
+    }
+    
+    return YES;
 }
 
 #pragma mark - UITableViewDelegate
@@ -307,66 +323,6 @@
     });
 }
 
-#pragma mark - UIImagePickerControllerDelegate
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
-{
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    
-    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
-        UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
-    }
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark - IBActions
-- (IBAction)didPressImagePicker:(UIButton *)sender
-{
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil
-                                                                         message:nil
-                                                                  preferredStyle:UIAlertControllerStyleActionSheet];
-    NSArray *options = @[@"Take Photo or Video", @"Photo/Video Library"];
-    
-    UIAlertAction *camera = [UIAlertAction actionWithTitle:[options firstObject]
-                                                     style:UIAlertActionStyleDefault
-                                                   handler:^(UIAlertAction * _Nonnull action) {
-                                                       // TODO
-                                                   }];
-    [actionSheet addAction:camera];
-    
-    UIAlertAction *photoLibrary = [UIAlertAction actionWithTitle:[options lastObject]
-                                                           style:UIAlertActionStyleDefault
-                                                         handler:^(UIAlertAction * _Nonnull action) {
-                                                             [self presentViewController:_pickerController animated:YES completion:nil];
-                                                         }];
-    [actionSheet addAction:photoLibrary];
-    
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel"
-                                                     style:UIAlertActionStyleCancel
-                                                   handler:nil];
-    [actionSheet addAction:cancel];
-    [self presentViewController:actionSheet animated:YES completion:nil];
-}
-
-- (IBAction)didPressSendButton:(UIButton *)sender
-{
-    if (_sendMessageTF.text.length > 0) {
-
-        [self createReceiverTextMessage];
-        [self createSenderTextMessage];
-        _sendMessageTF.text = nil;
-        
-        [_tableView reloadData];
-    }
-    CGPoint bottomOffset = CGPointMake(0, _tableView.contentSize.height - _tableView.bounds.size.height);
-    [_tableView setContentOffset:bottomOffset animated:YES];
-}
-
 - (void)createReceiverTextMessage
 {
     NCChat *message       = [[NCChat alloc] init];
@@ -385,6 +341,95 @@
     message.isMine        = NO;
     message.chatDataType  = ChatData_Message;
     [_todayMessages addObject:message];
+}
+
+- (void)createReceiverImageMessage:(UIImage *)photo
+{
+    NCChat *message       = [[NCChat alloc] init];
+    message.image         = photo;
+    message.time          = [NSDate date];
+    message.isMine        = YES;
+    message.chatDataType  = ChatData_Image;
+    [_todayMessages addObject:message];
+}
+
+- (void)createSenderImageMessage:(UIImage *)photo
+{
+    NCChat *message       = [[NCChat alloc] init];
+    message.image         = photo;
+    message.time          = [NSDate date];
+    message.isMine        = NO;
+    message.chatDataType  = ChatData_Image;
+    [_todayMessages addObject:message];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+
+//    If you want to save the photo to the camera roll...
+//    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+//        UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
+//    }
+    [self createReceiverImageMessage:chosenImage];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    [_tableView reloadData];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - IBActions
+- (IBAction)didPressImagePicker:(UIButton *)sender
+{
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil
+                                                                         message:nil
+                                                                  preferredStyle:UIAlertControllerStyleActionSheet];
+    NSArray *options = @[@"Take Photo or Video", @"Photo/Video Library"];
+    
+    UIAlertAction *camera = [UIAlertAction actionWithTitle:[options firstObject]
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * _Nonnull action) {
+                                                       if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+                                                           _pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+                                                                                                                        [self presentViewController:_pickerController animated:YES completion:nil];
+                                                       }
+                                                   }];
+    [actionSheet addAction:camera];
+    
+    UIAlertAction *photoLibrary = [UIAlertAction actionWithTitle:[options lastObject]
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             
+                                                                 _pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                                                                 [self presentViewController:_pickerController animated:YES completion:nil];
+                                                         }];
+    [actionSheet addAction:photoLibrary];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel"
+                                                     style:UIAlertActionStyleCancel
+                                                   handler:nil];
+    [actionSheet addAction:cancel];
+    [self presentViewController:actionSheet animated:YES completion:nil];
+}
+
+
+- (IBAction)didPressSendButton:(UIButton *)sender
+{
+    if (_sendMessageTF.text.length > 0) {
+
+        [self createReceiverTextMessage];
+        [self createSenderTextMessage];
+        _sendMessageTF.text = nil;
+        
+        [_tableView reloadData];
+    }
+    CGPoint bottomOffset = CGPointMake(0, _tableView.contentSize.height - _tableView.bounds.size.height);
+    [_tableView setContentOffset:bottomOffset animated:YES];
 }
 
 #pragma mark - Keyboard Management

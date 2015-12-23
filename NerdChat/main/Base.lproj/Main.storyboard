@@ -89,7 +89,7 @@
                                             <outlet property="delegate" destination="lPB-k7-NiZ" id="XoN-XF-gRX"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJv-LT-qIr">
+                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJv-LT-qIr">
                                         <rect key="frame" x="248" y="8" width="64" height="30"/>
                                         <color key="backgroundColor" red="0.63921568630000003" green="0.019607843140000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -173,6 +173,7 @@
                     <connections>
                         <outlet property="navigationSubtitleLabel" destination="zUo-25-ZNY" id="lTE-cO-FMk"/>
                         <outlet property="navigationTitleLabel" destination="AiW-iO-mtZ" id="oPI-JQ-Y3T"/>
+                        <outlet property="sendMessageBtn" destination="kJv-LT-qIr" id="Rk3-uh-3YS"/>
                         <outlet property="sendMessageTF" destination="rrx-yt-GJz" id="LiI-oC-96i"/>
                         <outlet property="tableView" destination="Wum-GT-NRk" id="7v2-YE-s9S"/>
                         <outlet property="toolBar" destination="nCY-E5-Rdp" id="WVL-YO-uEl"/>

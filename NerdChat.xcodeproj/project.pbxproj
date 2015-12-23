@@ -12,10 +12,26 @@
 		4A30775F1C20A981003F8B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3077411C20A981003F8B7B /* Main.storyboard */; };
 		4A3077601C20A981003F8B7B /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A3077431C20A981003F8B7B /* LaunchScreen.strings */; };
 		4A3077611C20A981003F8B7B /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A3077451C20A981003F8B7B /* Main.strings */; };
-		4A3077621C20A981003F8B7B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A3077491C20A981003F8B7B /* Info.plist */; };
 		4A3077631C20A981003F8B7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A30774A1C20A981003F8B7B /* main.m */; };
 		4A3077641C20A981003F8B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A30774E1C20A981003F8B7B /* Assets.xcassets */; };
-		4A3077651C20A981003F8B7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A30775C1C20A981003F8B7B /* ViewController.m */; };
+		4A3077651C20A981003F8B7B /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A30775C1C20A981003F8B7B /* HomeVC.m */; };
+		4A3D41321C2333FD00DEDCB7 /* NCUsersTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D412B1C2333FD00DEDCB7 /* NCUsersTVC.m */; };
+		4A3D41331C2333FD00DEDCB7 /* NCUsersTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3D412C1C2333FD00DEDCB7 /* NCUsersTVC.xib */; };
+		4A3D41341C2333FD00DEDCB7 /* SenderTextTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D41301C2333FD00DEDCB7 /* SenderTextTVC.m */; };
+		4A3D41351C2333FD00DEDCB7 /* SenderTextTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3D41311C2333FD00DEDCB7 /* SenderTextTVC.xib */; };
+		4A3D41391C23344C00DEDCB7 /* SenderImageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D41371C23344C00DEDCB7 /* SenderImageTVC.m */; };
+		4A3D413A1C23344C00DEDCB7 /* SenderImageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3D41381C23344C00DEDCB7 /* SenderImageTVC.xib */; };
+		4A3D413E1C23348100DEDCB7 /* ReceiverTextTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D413C1C23348100DEDCB7 /* ReceiverTextTVC.m */; };
+		4A3D413F1C23348100DEDCB7 /* ReceiverTextTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3D413D1C23348100DEDCB7 /* ReceiverTextTVC.xib */; };
+		4A3D41431C23349300DEDCB7 /* ReceiverImageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D41411C23349300DEDCB7 /* ReceiverImageTVC.m */; };
+		4A3D41441C23349300DEDCB7 /* ReceiverImageTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3D41421C23349300DEDCB7 /* ReceiverImageTVC.xib */; };
+		4A45BEE71C21E96400D97B2A /* NCReplies.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEE61C21E96400D97B2A /* NCReplies.m */; };
+		4A45BEEA1C21E99B00D97B2A /* NCFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEE91C21E99B00D97B2A /* NCFriends.m */; };
+		4A45BEED1C21E9D100D97B2A /* NCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEEC1C21E9D100D97B2A /* NCUser.m */; };
+		4A45BEF01C21F36300D97B2A /* NCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEEF1C21F36300D97B2A /* NCHelper.m */; };
+		4A45BEF91C2200DE00D97B2A /* ChatRoomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A45BEF81C2200DE00D97B2A /* ChatRoomVC.m */; };
+		4ABA136D1C249C56000ACB09 /* NCChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABA136C1C249C56000ACB09 /* NCChat.m */; };
+		4ABA13701C249F42000ACB09 /* NCDefaultMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABA136F1C249F42000ACB09 /* NCDefaultMessages.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +46,39 @@
 		4A3077491C20A981003F8B7B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A30774A1C20A981003F8B7B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A30774E1C20A981003F8B7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4A30775B1C20A981003F8B7B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4A30775C1C20A981003F8B7B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4A30775B1C20A981003F8B7B /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		4A30775C1C20A981003F8B7B /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		4A3D412A1C2333FD00DEDCB7 /* NCUsersTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUsersTVC.h; sourceTree = "<group>"; };
+		4A3D412B1C2333FD00DEDCB7 /* NCUsersTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUsersTVC.m; sourceTree = "<group>"; };
+		4A3D412C1C2333FD00DEDCB7 /* NCUsersTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCUsersTVC.xib; sourceTree = "<group>"; };
+		4A3D412F1C2333FD00DEDCB7 /* SenderTextTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenderTextTVC.h; sourceTree = "<group>"; };
+		4A3D41301C2333FD00DEDCB7 /* SenderTextTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenderTextTVC.m; sourceTree = "<group>"; };
+		4A3D41311C2333FD00DEDCB7 /* SenderTextTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SenderTextTVC.xib; sourceTree = "<group>"; };
+		4A3D41361C23344C00DEDCB7 /* SenderImageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenderImageTVC.h; sourceTree = "<group>"; };
+		4A3D41371C23344C00DEDCB7 /* SenderImageTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenderImageTVC.m; sourceTree = "<group>"; };
+		4A3D41381C23344C00DEDCB7 /* SenderImageTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SenderImageTVC.xib; sourceTree = "<group>"; };
+		4A3D413B1C23348100DEDCB7 /* ReceiverTextTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverTextTVC.h; sourceTree = "<group>"; };
+		4A3D413C1C23348100DEDCB7 /* ReceiverTextTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverTextTVC.m; sourceTree = "<group>"; };
+		4A3D413D1C23348100DEDCB7 /* ReceiverTextTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiverTextTVC.xib; sourceTree = "<group>"; };
+		4A3D41401C23349300DEDCB7 /* ReceiverImageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverImageTVC.h; sourceTree = "<group>"; };
+		4A3D41411C23349300DEDCB7 /* ReceiverImageTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverImageTVC.m; sourceTree = "<group>"; };
+		4A3D41421C23349300DEDCB7 /* ReceiverImageTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiverImageTVC.xib; sourceTree = "<group>"; };
+		4A45BEE51C21E96300D97B2A /* NCReplies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCReplies.h; sourceTree = "<group>"; };
+		4A45BEE61C21E96400D97B2A /* NCReplies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCReplies.m; sourceTree = "<group>"; };
+		4A45BEE81C21E99B00D97B2A /* NCFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCFriends.h; sourceTree = "<group>"; };
+		4A45BEE91C21E99B00D97B2A /* NCFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCFriends.m; sourceTree = "<group>"; };
+		4A45BEEB1C21E9D100D97B2A /* NCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCUser.h; sourceTree = "<group>"; };
+		4A45BEEC1C21E9D100D97B2A /* NCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCUser.m; sourceTree = "<group>"; };
+		4A45BEEE1C21F36300D97B2A /* NCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHelper.h; sourceTree = "<group>"; };
+		4A45BEEF1C21F36300D97B2A /* NCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHelper.m; sourceTree = "<group>"; };
+		4A45BEF71C2200DE00D97B2A /* ChatRoomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomVC.h; sourceTree = "<group>"; };
+		4A45BEF81C2200DE00D97B2A /* ChatRoomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomVC.m; sourceTree = "<group>"; };
 		4A58F6E81C0B701A002F125B /* NerdChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NerdChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ABA136B1C249C56000ACB09 /* NCChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCChat.h; sourceTree = "<group>"; };
+		4ABA136C1C249C56000ACB09 /* NCChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCChat.m; sourceTree = "<group>"; };
+		4ABA136E1C249F42000ACB09 /* NCDefaultMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDefaultMessages.h; sourceTree = "<group>"; };
+		4ABA136F1C249F42000ACB09 /* NCDefaultMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDefaultMessages.m; sourceTree = "<group>"; };
+		4ABA13711C24A384000ACB09 /* NCBubbles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBubbles.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +171,7 @@
 				4A3077531C20A981003F8B7B /* core */,
 				4A3077571C20A981003F8B7B /* main */,
 				4A3077581C20A981003F8B7B /* ui */,
+				4A3C4B4B1C234EB9004D1A31 /* views */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -142,6 +189,11 @@
 		4A3077541C20A981003F8B7B /* business */ = {
 			isa = PBXGroup;
 			children = (
+				4A45BEEB1C21E9D100D97B2A /* NCUser.h */,
+				4A45BEEC1C21E9D100D97B2A /* NCUser.m */,
+				4ABA136B1C249C56000ACB09 /* NCChat.h */,
+				4ABA136C1C249C56000ACB09 /* NCChat.m */,
+				4A45BEE41C21E85900D97B2A /* factory */,
 			);
 			path = business;
 			sourceTree = "<group>";
@@ -156,6 +208,8 @@
 		4A3077561C20A981003F8B7B /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4A45BEEE1C21F36300D97B2A /* NCHelper.h */,
+				4A45BEEF1C21F36300D97B2A /* NCHelper.m */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -171,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3077591C20A981003F8B7B /* controllers */,
+				4A45BEF11C21F71A00D97B2A /* cells */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -178,18 +233,80 @@
 		4A3077591C20A981003F8B7B /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A30775A1C20A981003F8B7B /* common */,
-				4A30775B1C20A981003F8B7B /* ViewController.h */,
-				4A30775C1C20A981003F8B7B /* ViewController.m */,
+				4A30775B1C20A981003F8B7B /* HomeVC.h */,
+				4A30775C1C20A981003F8B7B /* HomeVC.m */,
+				4A45BEF71C2200DE00D97B2A /* ChatRoomVC.h */,
+				4A45BEF81C2200DE00D97B2A /* ChatRoomVC.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
 		};
-		4A30775A1C20A981003F8B7B /* common */ = {
+		4A3C4B4B1C234EB9004D1A31 /* views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = common;
+			name = views;
+			path = ui/views;
+			sourceTree = "<group>";
+		};
+		4A3D41291C2333FD00DEDCB7 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				4A3D412A1C2333FD00DEDCB7 /* NCUsersTVC.h */,
+				4A3D412B1C2333FD00DEDCB7 /* NCUsersTVC.m */,
+				4A3D412C1C2333FD00DEDCB7 /* NCUsersTVC.xib */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		4A3D412D1C2333FD00DEDCB7 /* receiver */ = {
+			isa = PBXGroup;
+			children = (
+				4A3D413B1C23348100DEDCB7 /* ReceiverTextTVC.h */,
+				4A3D413C1C23348100DEDCB7 /* ReceiverTextTVC.m */,
+				4A3D413D1C23348100DEDCB7 /* ReceiverTextTVC.xib */,
+				4A3D41401C23349300DEDCB7 /* ReceiverImageTVC.h */,
+				4A3D41411C23349300DEDCB7 /* ReceiverImageTVC.m */,
+				4A3D41421C23349300DEDCB7 /* ReceiverImageTVC.xib */,
+			);
+			path = receiver;
+			sourceTree = "<group>";
+		};
+		4A3D412E1C2333FD00DEDCB7 /* sender */ = {
+			isa = PBXGroup;
+			children = (
+				4A3D412F1C2333FD00DEDCB7 /* SenderTextTVC.h */,
+				4A3D41301C2333FD00DEDCB7 /* SenderTextTVC.m */,
+				4A3D41311C2333FD00DEDCB7 /* SenderTextTVC.xib */,
+				4A3D41361C23344C00DEDCB7 /* SenderImageTVC.h */,
+				4A3D41371C23344C00DEDCB7 /* SenderImageTVC.m */,
+				4A3D41381C23344C00DEDCB7 /* SenderImageTVC.xib */,
+			);
+			path = sender;
+			sourceTree = "<group>";
+		};
+		4A45BEE41C21E85900D97B2A /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				4A45BEE81C21E99B00D97B2A /* NCFriends.h */,
+				4A45BEE91C21E99B00D97B2A /* NCFriends.m */,
+				4A45BEE51C21E96300D97B2A /* NCReplies.h */,
+				4A45BEE61C21E96400D97B2A /* NCReplies.m */,
+				4ABA136E1C249F42000ACB09 /* NCDefaultMessages.h */,
+				4ABA136F1C249F42000ACB09 /* NCDefaultMessages.m */,
+			);
+			path = factory;
+			sourceTree = "<group>";
+		};
+		4A45BEF11C21F71A00D97B2A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				4A3D41291C2333FD00DEDCB7 /* home */,
+				4A3D412D1C2333FD00DEDCB7 /* receiver */,
+				4A3D412E1C2333FD00DEDCB7 /* sender */,
+				4ABA13711C24A384000ACB09 /* NCBubbles.h */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		4A58F6DF1C0B701A002F125B = {
@@ -268,9 +385,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A30775E1C20A981003F8B7B /* LaunchScreen.storyboard in Resources */,
+				4A3D413F1C23348100DEDCB7 /* ReceiverTextTVC.xib in Resources */,
 				4A3077611C20A981003F8B7B /* Main.strings in Resources */,
+				4A3D41331C2333FD00DEDCB7 /* NCUsersTVC.xib in Resources */,
+				4A3D41441C23349300DEDCB7 /* ReceiverImageTVC.xib in Resources */,
 				4A3077601C20A981003F8B7B /* LaunchScreen.strings in Resources */,
-				4A3077621C20A981003F8B7B /* Info.plist in Resources */,
+				4A3D413A1C23344C00DEDCB7 /* SenderImageTVC.xib in Resources */,
+				4A3D41351C2333FD00DEDCB7 /* SenderTextTVC.xib in Resources */,
 				4A3077641C20A981003F8B7B /* Assets.xcassets in Resources */,
 				4A30775F1C20A981003F8B7B /* Main.storyboard in Resources */,
 			);
@@ -283,9 +404,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A3077651C20A981003F8B7B /* ViewController.m in Sources */,
+				4A3077651C20A981003F8B7B /* HomeVC.m in Sources */,
+				4A45BEED1C21E9D100D97B2A /* NCUser.m in Sources */,
+				4ABA13701C249F42000ACB09 /* NCDefaultMessages.m in Sources */,
+				4ABA136D1C249C56000ACB09 /* NCChat.m in Sources */,
+				4A45BEF91C2200DE00D97B2A /* ChatRoomVC.m in Sources */,
+				4A3D41391C23344C00DEDCB7 /* SenderImageTVC.m in Sources */,
+				4A3D41341C2333FD00DEDCB7 /* SenderTextTVC.m in Sources */,
 				4A3077631C20A981003F8B7B /* main.m in Sources */,
+				4A3D41321C2333FD00DEDCB7 /* NCUsersTVC.m in Sources */,
 				4A30775D1C20A981003F8B7B /* AppDelegate.m in Sources */,
+				4A45BEF01C21F36300D97B2A /* NCHelper.m in Sources */,
+				4A45BEE71C21E96400D97B2A /* NCReplies.m in Sources */,
+				4A3D41431C23349300DEDCB7 /* ReceiverImageTVC.m in Sources */,
+				4A45BEEA1C21E99B00D97B2A /* NCFriends.m in Sources */,
+				4A3D413E1C23348100DEDCB7 /* ReceiverTextTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
